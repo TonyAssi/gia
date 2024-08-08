@@ -8,3 +8,13 @@ git clone https://github.com/TonyAssi/gia.git
 ```
 
 ## Installation
+Install required libraries:
+```bash
+pip install -r requirements.txt
+```
+
+## Usage
+Launch Gradio app:
+```bash
+python app.py
+```
