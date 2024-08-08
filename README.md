@@ -1,0 +1,2 @@
+# gia
+AI Handbag Character
