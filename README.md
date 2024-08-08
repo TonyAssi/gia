@@ -13,6 +13,11 @@ Install required libraries
 pip install -r requirements.txt
 ```
 
+## Gemini API Key
+[Get a Gemini API key here](https://aistudio.google.com/app/u/1/apikey)
+
+Open the **app.py** file
+
 ## Usage
 Launch Gradio app
 ```bash
