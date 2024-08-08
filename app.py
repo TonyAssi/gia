@@ -239,5 +239,5 @@ with gr.Blocks(theme=theme, css=css) as demo:
     button_personality.click(change_personality, inputs=[slider_helpful,slider_polite,slider_funny,slider_formal,slider_talkative,slider_random],outputs=[], show_progress=False)
     button_personality_default.click(change_personality_default, inputs=[], outputs=[slider_helpful,slider_polite,slider_funny,slider_formal,slider_talkative,slider_random], show_progress=False)
     
-demo.launch(show_api=False)
+demo.launch(show_api=False, share=True)
 
