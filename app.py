@@ -6,7 +6,7 @@ from PIL import Image
 import random
 
 # Gemini API key
-genai.configure(api_key=os.environ["GEMINI_API_KEY"])
+genai.configure(api_key="YOUR_GEMINI_API_KEY")
 
 # Gemini config
 generation_config = {
