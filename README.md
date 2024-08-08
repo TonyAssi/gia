@@ -31,6 +31,6 @@ python app.py
 
 It'll print out the local and public URLs running the app. It should looking something like this
 ```
-Running on local URL:  http://127.0.0.1:7861
+Running on local URL:  http://127.0.0.1:7860
 Running on public URL: https://ded9ba42c916bded4f.gradio.live
 ```
