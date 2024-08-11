@@ -63,8 +63,6 @@ def get_side_panel(mood):
 
     # mood + number e.g. sad2
     mood = mood + str(random_number)
-
-    print(mood)
     
     return gr.Markdown('<video height="400" autoplay loop muted><source src="https://huggingface.co/spaces/tonyassi/gia-dev/resolve/main/Moods/' + mood+ '.mp4" type="video/mp4"></video>', elem_id='side-panel')
 
@@ -74,7 +72,6 @@ def chat(user_text, history, input_image):
 
     # Create a new chat session is the chat history is empty
     if (history==[]):
-        print('Create new chat session')
         chat_session = model.start_chat(history=[])
 
     # If there's no image then send text to Gemini
@@ -97,9 +94,6 @@ def chat(user_text, history, input_image):
 
     # Add user and Gemini message to history
     history.append( (user_text, bot_text) )
-
-    print('User:', user_text)
-    print('Bot:', bot_text, '\n')
         
     return '', history, None, get_side_panel(mood)
 
