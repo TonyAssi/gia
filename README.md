@@ -1,4 +1,7 @@
 # Gia
+
+![Uploading gia-360-sam-5.3.gif…]()
+
 by [Tony Assi](https://www.tonyassi.com/)
 
 Gia is an AI handbag with expressive emotion powered by [Google Gemini API](https://ai.google.dev/gemini-api), designed to bring artificial intelligence out of the cloud and into everyday life.
