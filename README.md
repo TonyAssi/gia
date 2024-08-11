@@ -6,6 +6,8 @@ by [Tony Assi](https://www.tonyassi.com/)
 
 Gia is an AI handbag with expressive emotion powered by [Google Gemini API](https://ai.google.dev/gemini-api), designed to bring artificial intelligence out of the cloud and into everyday life.
 
+Try the free web demo: [![Hugging Face Spaces](https://img.shields.io/badge/%F0%9F%A4%97%20Hugging%20Face-Spaces-blue)]([https://huggingface.co/spaces/tonyassi/fashion-try-on](https://huggingface.co/spaces/tonyassi/gia))
+
 ## Download Files
 Download ZIP or use the following command
 ```bash
