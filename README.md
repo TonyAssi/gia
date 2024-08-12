@@ -31,6 +31,8 @@ genai.configure(api_key="YOUR_GEMINI_API_KEY")
 ```
 
 ## Usage
+Please note the app is designed for Desktop and works best with Chrome.
+
 Launch Gradio app
 ```bash
 python app.py
