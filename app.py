@@ -64,7 +64,7 @@ def get_side_panel(mood):
     # mood + number e.g. sad2
     mood = mood + str(random_number)
     
-    return gr.Markdown('<video height="400" autoplay loop muted><source src="https://huggingface.co/spaces/tonyassi/gia-dev/resolve/main/Moods/' + mood+ '.mp4" type="video/mp4"></video>', elem_id='side-panel')
+    return gr.Markdown('<video height="400" autoplay loop muted><source src="https://huggingface.co/spaces/tonyassi/g/resolve/main/Moods/' + mood+ '.mp4" type="video/mp4"></video>', elem_id='side-panel')
 
 # Chat with Gemini
 def chat(user_text, history, input_image):
@@ -110,7 +110,7 @@ def change_personality_default():
 # Get random standby video
 def get_standby_video():
     random_number = str(random.randint(1, 5))
-    return gr.Markdown('<video  width="864" height="550" autoplay loop muted><source src="https://huggingface.co/spaces/tonyassi/gia-dev/resolve/main/Moods/passive' + random_number +'.mp4" type="video/mp4"></video>', visible=True)
+    return gr.Markdown('<video  width="864" height="550" autoplay loop muted><source src="https://huggingface.co/spaces/tonyassi/g/resolve/main/Moods/passive' + random_number +'.mp4" type="video/mp4"></video>', visible=True)
 
 def standby_mode():
     return gr.update(visible=True), gr.update(visible=True), gr.update(visible=False), gr.update(visible=False), gr.update(visible=False), gr.update(visible=False), gr.update(visible=False), gr.update(visible=False), gr.update(visible=False), get_standby_video()
@@ -119,7 +119,7 @@ def chat_mode():
     return gr.update(visible=False), gr.update(visible=False), gr.update(visible=True), gr.update(visible=True), gr.update(visible=True), gr.update(visible=True), gr.update(visible=True), gr.update(visible=True), gr.update(visible=True)
 
 def settings_mode():
-    about_new = gr.Markdown(""" <video height="400" autoplay><source src="https://huggingface.co/spaces/tonyassi/gia-dev/resolve/main/Moods/gia1.mp4" type="video/mp4"></video>
+    about_new = gr.Markdown(""" <video height="400" autoplay><source src="https://huggingface.co/spaces/tonyassi/g/resolve/main/Moods/gia1.mp4" type="video/mp4"></video>
                                 <br><br>
                                 """, 
                                 visible=True)
@@ -188,17 +188,17 @@ with gr.Blocks(theme=theme, css=css) as demo:
             chatbox = gr.Chatbot(height=520, show_label=False)
             textbox = gr.Textbox(show_label=False, max_lines=2, placeholder='Talk to Gia')
         with gr.Column(scale=1):
-            side_panel = gr.Markdown('<video height="400" autoplay loop muted><source src="https://huggingface.co/spaces/tonyassi/gia-dev/resolve/main/Moods/passive2.mp4" type="video/mp4"></video>', elem_id='side-panel')
+            side_panel = gr.Markdown('<video height="400" autoplay loop muted><source src="https://huggingface.co/spaces/tonyassi/g/resolve/main/Moods/passive2.mp4" type="video/mp4"></video>', elem_id='side-panel')
             input_image = gr.Image(sources=['webcam'], type='filepath', show_label=False)
             with gr.Row(elem_id='button-row'):
-                standby_button = gr.Button(value='', icon='https://huggingface.co/spaces/tonyassi/gia-dev/resolve/main/standby.png', elem_id='s-button', scale=0)
-                refresh_button = gr.Button(value='', icon='https://huggingface.co/spaces/tonyassi/gia-dev/resolve/main/refresh.png', elem_id='s-button', scale=0, link='https://tonyassi-gia-dev.hf.space/')
-                settings_button = gr.Button(value='', icon='https://huggingface.co/spaces/tonyassi/gia-dev/resolve/main/settings.png', elem_id='s-button', scale=0)
+                standby_button = gr.Button(value='', icon='https://huggingface.co/spaces/tonyassi/g/resolve/main/standby.png', elem_id='s-button', scale=0)
+                refresh_button = gr.Button(value='', icon='https://huggingface.co/spaces/tonyassi/g/resolve/main/refresh.png', elem_id='s-button', scale=0, link='https://tonyassi-gia-dev.hf.space/')
+                settings_button = gr.Button(value='', icon='https://huggingface.co/spaces/tonyassi/g/resolve/main/settings.png', elem_id='s-button', scale=0)
 
     # Standby
     with gr.Row():
-        video_standby = gr.Markdown('<video  width="864" height="550" autoplay loop muted><source src="https://huggingface.co/spaces/tonyassi/gia-dev/resolve/main/Moods/passive2.mp4" type="video/mp4"></video>', visible=False)
-        chat_button = gr.Button(value='', icon='https://huggingface.co/spaces/tonyassi/gia-dev/resolve/main/chat.png', elem_id='s-button', scale=0, visible=False)
+        video_standby = gr.Markdown('<video  width="864" height="550" autoplay loop muted><source src="https://huggingface.co/spaces/tonyassi/g/resolve/main/Moods/passive2.mp4" type="video/mp4"></video>', visible=False)
+        chat_button = gr.Button(value='', icon='https://huggingface.co/spaces/tonyassi/g/resolve/main/chat.png', elem_id='s-button', scale=0, visible=False)
 
     # Settings
     with gr.Row():
@@ -215,7 +215,7 @@ with gr.Blocks(theme=theme, css=css) as demo:
         with gr.Column():
             about = gr.Markdown("<br><br><br>", 
                                 visible=False)
-            chat_button_settings = gr.Button(value='', icon='https://huggingface.co/spaces/tonyassi/gia-dev/resolve/main/chat.png', elem_id='s-button', scale=0, visible=False)
+            chat_button_settings = gr.Button(value='', icon='https://huggingface.co/spaces/tonyassi/g/resolve/main/chat.png', elem_id='s-button', scale=0, visible=False)
     
     # Events
     textbox.submit(chat, inputs=[textbox,chatbox,input_image], outputs=[textbox,chatbox,input_image,side_panel], show_progress=False)
